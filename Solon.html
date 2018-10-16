@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grades</title>
+	</head>
+	<body>
+		<center>
+			<table border="3">
+				<tr>
+					<td><p id=ID></p></td>
+				</tr>
+				<tr>
+					<td><p id="LN"></p></td>
+				</tr>
+				<tr>
+					<td><p id="FN"></p></td>
+				</tr>
+				<tr>
+					<td>
+					<p id="cout" style="color: red">
+					</p>
+					<p id="cout1" style="color: blue"></p>
+					</td>
+				</tr>
+			</table>
+		</center>
+		<script>
+			var ID = prompt("Input your ID Number: ");
+			var LN = prompt("Input your Last Name: ");
+			var FN = prompt("Input your First Name: ");
+			var G = prompt("Input your Final Grade: ");
+				document.getElementById("ID").innerHTML = "ID Number: " + ID;
+       			 document.getElementById("LN").innerHTML = "Last Name: " +LN;
+       			 document.getElementById("FN").innerHTML = "First Name: " +FN;
+       		 if (G>=1.0 && G<=5.0)  
+       			{
+       				if(G>=1.0 && G<=3.0)
+       				{
+       			 	 if(G%2)
+       			 	 	{document.getElementById("cout").innerHTML = "YOU'RE PASSED! :)";}
+       			 	else
+       			 	   {
+       				   document.getElementById("cout1").innerHTML = "YOU'RE PASSED! ;)";}
+       				}
+       				else
+       				{
+       					if(G%2)
+       			 	 	{document.getElementById("cout").innerHTML = "YOU'RE FAILED!! :(";}
+       			 	else
+       			 	   {
+       				   document.getElementById("cout1").innerHTML = "YOU'RE FAILED ;(";}
+       				}
+       			} 
+       		 else 
+       			 {
+       			 document.getElementById("cout").innerHTML = "You're DROP!!!!!!";
+       			}
+		</script>
+	</body>
+</html>
